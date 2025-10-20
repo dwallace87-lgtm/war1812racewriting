@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.C.E. Strategy Lesson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Anton', sans-serif;
+        }
+        .slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            height: 100%;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div id="slidedeck" class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl aspect-video overflow-hidden relative border-4 border-indigo-500">
+
+        <!-- Slide 1: Title -->
+        <div id="slide-1" class="slide w-full h-full bg-slate-800 text-white">
+            <div class="slide-content justify-between">
+                 <div class="w-full text-left p-4"><span class="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Mr. Wallace's U.S. History</span></div>
+                <div class="flex flex-col items-center">
+                    <h1 class="text-7xl md:text-8xl font-bold mb-4 drop-shadow-lg uppercase text-stroke text-yellow-400 tracking-wider">The Ultimate Hack</h1>
+                    <p class="text-4xl md:text-5xl bg-indigo-600 text-white px-6 py-2 rounded-lg shadow-xl uppercase font-bold tracking-wide">For A+ Answers</p>
+                </div>
+                 <div class="w-full h-10"></div> <!-- Spacer -->
+            </div>
+        </div>
+
+        <!-- Slide 2: Vocab Intro -->
+        <div id="slide-2" class="slide w-full h-full hidden bg-gray-800 text-white">
+            <div class="slide-content justify-around">
+                <h2 class="text-6xl uppercase font-bold mb-6 text-stroke text-yellow-400">The 4-1-1 on the Lingo</h2>
+                <div class="grid grid-cols-3 gap-6 w-full max-w-6xl">
+                    <div class="bg-slate-700 p-4 rounded-lg border-2 border-black">
+                        <h3 class="text-3xl font-bold uppercase text-indigo-300">Doctrine</h3>
+                        <p class="text-xl mt-2">Think of it as a country's <span class="font-bold text-yellow-300">main belief or rule</span> for how it acts. Like a "no drama" policy for your friend group.</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg border-2 border-black">
+                        <h3 class="text-3xl font-bold uppercase text-indigo-300">Foreign Policy</h3>
+                        <p class="text-xl mt-2">This is the country's <span class="font-bold text-yellow-300">game plan</span> for dealing with other nations. Who are its allies? Who are its rivals?</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg border-2 border-black">
+                        <h3 class="text-3xl font-bold uppercase text-indigo-300">Nationalism</h3>
+                        <p class="text-xl mt-2">This is next-level <span class="font-bold text-yellow-300">team pride</span> for your country. Believing your nation is the best and being super proud of it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Hook -->
+        <div id="slide-3" class="slide w-full h-full hidden bg-gray-100">
+            <div class="slide-content">
+                <h2 class="text-6xl md:text-7xl font-bold text-slate-800 mb-8 uppercase">Know the answer...<br>but can't explain it?</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-48 h-48 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <p class="text-3xl text-gray-600 mt-8 font-bold">Facts. We got you.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Class Objective -->
+        <div id="slide-4" class="slide w-full h-full hidden bg-indigo-600 text-white">
+            <div class="slide-content">
+                <h2 class="text-6xl uppercase font-bold mb-6">Today's Goal</h2>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+                <p class="text-3xl max-w-4xl leading-relaxed">
+                    Write a <span class="bg-yellow-400 text-black px-2 rounded">killer paragraph</span> that answers any historical question using <span class="bg-yellow-400 text-black px-2 rounded">evidence</span> to back it up.
+                </p>
+                <p class="text-xl mt-4 opacity-75">(No cap.)</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Introduce R.A.C.E. -->
+        <div id="slide-5" class="slide w-full h-full hidden">
+            <div class="slide-content">
+                <h2 class="text-6xl font-bold text-slate-800 mb-6 uppercase">R.A.C.E. is the cheat code.</h2>
+                <p class="text-2xl text-gray-600 mb-12">Every letter is a power-up for your paragraph.</p>
+                <div class="grid grid-cols-4 gap-6 w-full px-8">
+                    <div class="bg-red-500 text-white p-6 rounded-lg text-6xl font-bold shadow-2xl border-4 border-black">R</div>
+                    <div class="bg-blue-500 text-white p-6 rounded-lg text-6xl font-bold shadow-2xl border-4 border-black">A</div>
+                    <div class="bg-green-500 text-white p-6 rounded-lg text-6xl font-bold shadow-2xl border-4 border-black">C</div>
+                    <div class="bg-yellow-400 text-black p-6 rounded-lg text-6xl font-bold shadow-2xl border-4 border-black">E</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: R - Restate -->
+        <div id="slide-6" class="slide w-full h-full hidden bg-red-500 text-white">
+            <div class="slide-content">
+                <div class="bg-white text-red-500 w-28 h-28 rounded-full flex items-center justify-center text-7xl font-bold mb-6 shadow-lg border-4 border-black">R</div>
+                <h2 class="text-6xl font-bold">RESTATE THE QUESTION</h2>
+                <p class="text-2xl my-6">Flip the question. Make it your topic sentence.</p>
+                <div class="w-full max-w-3xl bg-red-400 p-6 rounded-lg text-left border-2 border-black">
+                    <p class="text-xl font-bold mb-2 uppercase">Question:</p>
+                    <p class="text-xl mb-4">How did the geography of New England affect its economy?</p>
+                    <p class="text-xl font-bold mb-2 uppercase">Your Start:</p>
+                    <p class="text-xl font-semibold bg-white text-black p-2 rounded">The geography of New England affected its economy by...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: A - Answer -->
+        <div id="slide-7" class="slide w-full h-full hidden bg-blue-500 text-white">
+            <div class="slide-content">
+                 <div class="bg-white text-blue-500 w-28 h-28 rounded-full flex items-center justify-center text-7xl font-bold mb-6 shadow-lg border-4 border-black">A</div>
+                <h2 class="text-6xl font-bold uppercase">Answer It.</h2>
+                <p class="text-3xl my-6">Straight up. No messing around. Give a direct, clear answer.</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-40 w-40" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Slide 8: C - Cite Evidence -->
+        <div id="slide-8" class="slide w-full h-full hidden bg-green-500 text-white">
+            <div class="slide-content">
+                <div class="bg-white text-green-500 w-28 h-28 rounded-full flex items-center justify-center text-7xl font-bold mb-6 shadow-lg border-4 border-black">C</div>
+                <h2 class="text-6xl font-bold uppercase">Cite Evidence</h2>
+                <p class="text-3xl my-6">Prove it. Bring the receipts from the text.</p>
+                <div class="w-full max-w-3xl bg-green-400 p-6 rounded-lg text-left border-2 border-black">
+                    <p class="text-2xl font-bold uppercase">Sentence Starters:</p>
+                    <ul class="list-disc list-inside text-2xl mt-2 font-semibold">
+                        <li>The text states, "..."</li>
+                        <li>According to the source...</li>
+                        <li>For example...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: E - Explain -->
+        <div id="slide-9" class="slide w-full h-full hidden bg-yellow-400 text-black">
+            <div class="slide-content">
+                <div class="bg-black text-yellow-400 w-28 h-28 rounded-full flex items-center justify-center text-7xl font-bold mb-6 shadow-lg border-4 border-black">E</div>
+                <h2 class="text-6xl font-bold uppercase">Explain It</h2>
+                <p class="text-3xl my-6">Connect your evidence back to your answer. Make it make sense.</p>
+                 <div class="w-full max-w-3xl bg-yellow-300 p-6 rounded-lg text-left border-2 border-black">
+                    <p class="text-2xl font-bold uppercase">Sentence Starters:</p>
+                    <ul class="list-disc list-inside text-2xl mt-2 font-semibold">
+                        <li>This shows that...</li>
+                        <li>This is important because...</li>
+                        <li>Therefore, it's clear that...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Simple Example -->
+        <div id="slide-10" class="slide w-full h-full hidden">
+            <div class="slide-content justify-around p-8">
+                <h2 class="text-5xl font-bold text-slate-800 uppercase">Peep the method:</h2>
+                
+                <div class="bg-gray-800 text-white p-4 rounded-lg border-2 border-black shadow-lg my-4 text-left">
+                    <h3 class="font-bold text-yellow-300 text-center text-xl uppercase">Source: Tony's Pizza Palace Menu</h3>
+                    <p class="text-center text-lg mt-1">Toppings: Pepperoni, Mushrooms, Onions, Pineapple, Olives, Bacon.</p>
+                </div>
+
+                <div class="w-full max-w-4xl text-left">
+                    <p class="text-2xl mb-4 font-bold">Question: Why is pizza a popular food?</p>
+                    <p class="text-xl mb-1 p-2 rounded bg-red-100"><span class="font-bold text-red-500">R:</span> Pizza is a popular food for a key reason.</p>
+                    <p class="text-xl mb-1 p-2 rounded bg-blue-100"><span class="font-bold text-blue-500">A:</span> It is popular mainly because it can be customized with many different toppings.</p>
+                    <p class="text-xl mb-1 p-2 rounded bg-green-100"><span class="font-bold text-green-500">C:</span> According to the menu, Tony's Pizza Palace offers toppings like "Pepperoni, Mushrooms, Onions, [and] Pineapple."</p>
+                    <p class="text-xl p-2 rounded bg-yellow-100"><span class="font-bold text-yellow-500">E:</span> This variety shows that pizza can be adapted to suit almost anyone's taste, which is why so many people enjoy it.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 11: History Example -->
+        <div id="slide-11" class="slide w-full h-full hidden">
+            <div class="slide-content">
+                <h2 class="text-6xl font-bold text-slate-800 uppercase">Aight, Let's Get Real.</h2>
+                <p class="text-4xl text-gray-600 my-8">Your Turn: The War of 1812</p>
+                <div class="w-full max-w-4xl bg-gray-800 text-white p-8 rounded-lg text-center shadow-2xl border-4 border-indigo-500">
+                    <p class="text-2xl font-bold uppercase">Your Prompt:</p>
+                    <p class="text-4xl mt-2">How was the War of 1812 a turning point for U.S. foreign policy and Americans’ sense of nationalism?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Your Mission -->
+        <div id="slide-12" class="slide w-full h-full hidden">
+             <div class="slide-content">
+                <h2 class="text-6xl font-bold text-slate-800 mb-8 uppercase">The Playbook:</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left w-full max-w-5xl">
+                    <div class="bg-gray-200 p-6 rounded-lg border-l-8 border-indigo-500 shadow-lg">
+                        <h3 class="text-3xl font-bold mb-2 uppercase">1. Read & Find Clues</h3>
+                        <p class="text-xl">Read "The War of 1812" passage like a detective hunting for evidence.</p>
+                    </div>
+                    <div class="bg-gray-200 p-6 rounded-lg border-l-8 border-indigo-500 shadow-lg">
+                        <h3 class="text-3xl font-bold mb-2 uppercase">2. Get Organized</h3>
+                        <p class="text-xl">Use the graphic organizer to sort your facts about foreign policy and nationalism.</p>
+                    </div>
+                    <div class="bg-gray-200 p-6 rounded-lg border-l-8 border-indigo-500 shadow-lg">
+                        <h3 class="text-3xl font-bold mb-2 uppercase">3. Build Your Case</h3>
+                        <p class="text-xl">Use the R.A.C.E. worksheet to construct your final, bulletproof paragraph.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Final Pep Talk -->
+        <div id="slide-13" class="slide w-full h-full hidden bg-slate-800 text-white">
+            <div class="slide-content">
+                 <h2 class="text-7xl font-bold mb-6 uppercase text-stroke text-yellow-400">You Got the Sauce Now.</h2>
+                 <p class="text-4xl text-gray-300">Go cook.</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-40 w-40 text-indigo-400 mt-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4v4m-2-2h4M5 3a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2Hz" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex items-center justify-between w-full max-w-5xl mt-4">
+        <button id="prevBtn" class="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center font-bold uppercase">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            Prev
+        </button>
+        <span id="slide-counter" class="text-gray-400 font-semibold text-lg">1 / 13</span>
+        <button id="nextBtn" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center font-bold uppercase">
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlide = 1;
+            const totalSlides = 13; // Updated total slides
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+
+            function showSlide(n) {
+                // Hide all slides
+                for (let i = 1; i <= totalSlides; i++) {
+                    const slideEl = document.getElementById('slide-' + i);
+                    if (slideEl) {
+                        slideEl.classList.add('hidden');
+                        slideEl.classList.remove('opacity-100');
+                    }
+                }
+
+                // Show the correct slide
+                const slide = document.getElementById('slide-' + n);
+                if(slide) {
+                    slide.classList.remove('hidden');
+                    // A tiny delay to allow the display property to apply before transitioning opacity
+                    setTimeout(() => {
+                        slide.classList.add('opacity-100');
+                    }, 10);
+                }
+            }
+
+            function updateButtons() {
+                prevBtn.disabled = (currentSlide === 1);
+                nextBtn.disabled = (currentSlide === totalSlides);
+                slideCounter.textContent = `${currentSlide} / ${totalSlides}`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                    updateButtons();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                    updateButtons();
+                }
+            });
+
+            // Initial setup
+            showSlide(currentSlide);
+            updateButtons();
+        });
+    </script>
+
+</body>
+</html>
