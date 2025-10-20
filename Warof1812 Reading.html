@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The War of 1812 - Multilingual Reading Passage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        .worksheet-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            border: 2px solid black;
+            position: relative;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        main p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .main-content {
+            flex-grow: 1;
+        }
+        .lang-button.active {
+            background-color: #d1d5db; /* gray-300 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="worksheet-container" id="worksheet-container">
+        
+        <!-- Language Switcher -->
+        <div class="flex justify-center mb-4 space-x-2">
+            <button onclick="switchLanguage('en')" id="btn-en" class="lang-button active border-2 border-black px-4 py-2 rounded">English</button>
+            <button onclick="switchLanguage('es')" id="btn-es" class="lang-button border-2 border-black px-4 py-2 rounded">Español</button>
+            <button onclick="switchLanguage('fr')" id="btn-fr" class="lang-button border-2 border-black px-4 py-2 rounded">Français</button>
+            <button onclick="switchLanguage('ar')" id="btn-ar" class="lang-button border-2 border-black px-4 py-2 rounded">العربية</button>
+        </div>
+
+        <!-- English Content -->
+        <div id="content-en" class="language-content">
+            <header class="flex justify-between items-center mb-6 pb-4 border-b-2 border-black">
+                <div class="border-2 border-black px-4 py-2">
+                    <h1 class="text-xl font-bold">The War of 1812: What Happened and Why It Mattered</h1>
+                </div>
+                <div class="border-b-2 border-black flex-grow ml-8 max-w-xs">
+                    <label for="name-en" class="mr-2">Name</label>
+                </div>
+            </header>
+            <main class="main-content">
+                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/battle-of-new-orleans?_a=BAVAZGID0" alt="A painting depicting the Battle of New Orleans" class="float-right ml-6 mb-4 w-1/3 max-w-md rounded border-2 border-black" onerror="this.style.display='none'">
+                <p>Have you ever wondered how a young nation learns to deal with other countries? For the United States, a big <strong>turning point</strong> came with the <strong>War of 1812</strong>. This conflict tested the country’s strength and choices. It also shaped how the U.S. would act with the world in the years that followed. But what caused the war, what were the effects, and why was it important?</p>
+                <p>At its core, the war grew from <strong>problems at sea and along the border</strong>. British ships were <strong>stopping American vessels, taking sailors, and blocking trade</strong>. On land, tensions flared along the <strong>Canadian border</strong>. The British were <strong>supplying weapons to Native American tribes</strong> who were resisting American settlers moving west. This support made many Americans feel that the British were interfering within U.S. territory and encouraging conflict. Leaders in Congress who wanted to <strong>defend honor and protect farmers and merchants</strong> pushed for action. These causes built up until war was declared in 1812.</p>
+                <p>The fighting happened on water and on land. U.S. and British forces battled on the Great Lakes, along the Canadian border, and on the Atlantic. There were hard losses, like the <strong>burning of the White House in Washington</strong>, and strong wins, like control on Lake Erie and the <strong>defense of Baltimore</strong>. In <strong>New Orleans</strong>, American troops stopped a major attack, which lifted spirits across the country.</p>
+                <p>The war did more than settle battles. It changed how the U.S. handled <strong>foreign affairs</strong>. After the war, other nations began to <strong>treat the United States with more respect</strong>. Trade slowly reopened, and the country started building a <strong>stronger navy</strong> to protect its ships. <strong>Peace on the Great Lakes</strong> made the northern border calmer, which helped both sides avoid future fights.</p>
+                <p>Understanding the War of 1812 matters because it shows how the U.S. learned to <strong>stand up for its rights</strong> while also choosing peace when possible. Just as people make smart plans to stay safe, a nation needs clear goals to guide its actions with others. By studying the causes and effects of this war, we can see how the U.S. moved toward a steady <strong>foreign policy</strong> that <strong>protected trade, defended borders, and tried to stay out of Europe’s constant wars</strong>.</p>
+                <p>So, when you think about how the U.S. deals with the world today, remember that many habits began after 1812. The country learned hard lessons, <strong>earned new respect</strong>, and set a path that would shape future choices for years to come.</p>
+            </main>
+            <footer class="text-right mt-auto pt-4 text-sm font-semibold">Mr Wallace's Class</footer>
+        </div>
+
+        <!-- Spanish Content -->
+        <div id="content-es" class="language-content" style="display:none;">
+            <header class="flex justify-between items-center mb-6 pb-4 border-b-2 border-black">
+                <div class="border-2 border-black px-4 py-2">
+                    <h1 class="text-xl font-bold">La Guerra de 1812: Qué Sucedió y Por Qué Fue Importante</h1>
+                </div>
+                <div class="border-b-2 border-black flex-grow ml-8 max-w-xs">
+                    <label for="name-es" class="mr-2">Nombre</label>
+                </div>
+            </header>
+            <main class="main-content">
+                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/battle-of-new-orleans?_a=BAVAZGID0" alt="Una pintura que representa la Batalla de Nueva Orleans" class="float-right ml-6 mb-4 w-1/3 max-w-md rounded border-2 border-black" onerror="this.style.display='none'">
+                <p>¿Alguna vez te has preguntado cómo una nación joven aprende a tratar con otros países? Para los Estados Unidos, un gran <strong>punto de inflexión</strong> llegó con la <strong>Guerra de 1812</strong>. Este conflicto puso a prueba la fuerza y las decisiones del país. También moldeó cómo actuarían los EE. UU. con el mundo en los años siguientes. Pero, ¿qué causó la guerra, cuáles fueron sus efectos y por qué fue importante?</p>
+                <p>En esencia, la guerra surgió de <strong>problemas en el mar y a lo largo de la frontera</strong>. Los barcos británicos estaban <strong>deteniendo buques estadounidenses, llevándose a los marineros y bloqueando el comercio</strong>. En tierra, las tensiones aumentaron a lo largo de la <strong>frontera canadiense</strong>. Los británicos estaban <strong>suministrando armas a las tribus nativas americanas</strong> que se resistían al avance de los colonos estadounidenses hacia el oeste. Este apoyo hizo que muchos estadounidenses sintieran que los británicos estaban interfiriendo en territorio estadounidense y fomentando el conflicto. Los líderes del Congreso que querían <strong>defender el honor y proteger a los agricultores y comerciantes</strong> presionaron para que se tomaran medidas. Estas causas se acumularon hasta que se declaró la guerra en 1812.</p>
+                <p>La lucha tuvo lugar en el agua y en la tierra. Las fuerzas estadounidenses y británicas combatieron en los Grandes Lagos, a lo largo de la frontera canadiense y en el Atlántico. Hubo duras derrotas, como la <strong>quema de la Casa Blanca en Washington</strong>, y grandes victorias, como el control del lago Erie y la <strong>defensa de Baltimore</strong>. En <strong>Nueva Orleans</strong>, las tropas estadounidenses detuvieron un gran ataque, lo que levantó el ánimo en todo el país.</p>
+                <p>La guerra hizo más que resolver batallas. Cambió la forma en que los EE. UU. manejaban los <strong>asuntos exteriores</strong>. Después de la guerra, otras naciones comenzaron a <strong>tratar a los Estados Unidos con más respeto</strong>. El comercio se reabrió lentamente y el país comenzó a construir una <strong>marina más fuerte</strong> para proteger sus barcos. La <strong>paz en los Grandes Lagos</strong> calmó la frontera norte, lo que ayudó a ambas partes a evitar futuras disputas.</p>
+                <p>Entender la Guerra de 1812 es importante porque muestra cómo los EE. UU. aprendieron a <strong>defender sus derechos</strong> y al mismo tiempo a elegir la paz cuando era posible. Así como las personas elaboran planes inteligentes para mantenerse a salvo, una nación necesita objetivos claros para guiar sus acciones con los demás. Al estudiar las causas y los efectos de esta guerra, podemos ver cómo los EE. UU. avanzaron hacia una <strong>política exterior</strong> estable que <strong>protegía el comercio, defendía las fronteras e intentaba mantenerse al margen de las constantes guerras de Europa</strong>.</p>
+                <p>Así que, cuando pienses en cómo los EE. UU. se relacionan con el mundo hoy en día, recuerda que muchas de sus costumbres comenzaron después de 1812. El país aprendió duras lecciones, <strong>ganó un nuevo respeto</strong> y trazó un camino que daría forma a las decisiones futuras durante años.</p>
+            </main>
+            <footer class="text-right mt-auto pt-4 text-sm font-semibold">Clase del Sr. Wallace</footer>
+        </div>
+
+        <!-- French Content -->
+        <div id="content-fr" class="language-content" style="display:none;">
+            <header class="flex justify-between items-center mb-6 pb-4 border-b-2 border-black">
+                <div class="border-2 border-black px-4 py-2">
+                    <h1 class="text-xl font-bold">La Guerre de 1812 : Ce Qui S'est Passé et Pourquoi C'était Important</h1>
+                </div>
+                <div class="border-b-2 border-black flex-grow ml-8 max-w-xs">
+                    <label for="name-fr" class="mr-2">Nom</label>
+                </div>
+            </header>
+            <main class="main-content">
+                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/battle-of-new-orleans?_a=BAVAZGID0" alt="Une peinture représentant la bataille de la Nouvelle-Orléans" class="float-right ml-6 mb-4 w-1/3 max-w-md rounded border-2 border-black" onerror="this.style.display='none'">
+                <p>Vous êtes-vous déjà demandé comment une jeune nation apprend à traiter avec d'autres pays ? Pour les États-Unis, un grand <strong>tournant</strong> a été la <strong>Guerre de 1812</strong>. Ce conflit a mis à l'épreuve la force et les choix du pays. Il a également façonné la manière dont les États-Unis agiraient avec le monde dans les années qui ont suivi. Mais quelles ont été les causes de la guerre, quels en ont été les effets et pourquoi était-elle importante ?</p>
+                <p>À la base, la guerre est née de <strong>problèmes en mer et le long de la frontière</strong>. Les navires britanniques <strong>arrêtaient les navires américains, enlevaient les marins et bloquaient le commerce</strong>. Sur terre, les tensions se sont intensifiées le long de la <strong>frontière canadienne</strong>. Les Britanniques <strong>fournissaient des armes aux tribus amérindiennes</strong> qui résistaient aux colons américains se déplaçant vers l'ouest. Ce soutien a donné à de nombreux Américains le sentiment que les Britanniques s'ingéraient على الأراضي الأمريكية ويشجعون الصراع. دفع القادة في الكونغرس الذين أرادوا <strong>الدفاع عن الشرف وحماية المزارعين والتجار</strong> إلى اتخاذ إجراء. تراكمت هذه الأسباب حتى تم إعلان الحرب في عام 1812.</p>
+                <p>Les combats se sont déroulés sur l'eau et sur terre. Les forces américaines et britanniques se sont affrontées sur les Grands Lacs, le long de la frontière canadienne et sur l'Atlantique. Il y a eu de lourdes pertes, comme l'<strong>incendie de la Maison Blanche à Washington</strong>, et de grandes victoires, comme le contrôle du lac Érié et la <strong>défense de Baltimore</strong>. À <strong>La Nouvelle-Orléans</strong>, les troupes américaines ont repoussé une attaque majeure, ce qui a remonté le moral dans tout le pays.</p>
+                <p>La guerre a fait plus que régler des batailles. Elle a changé la manière dont les États-Unis géraient les <strong>affaires étrangères</strong>. Après la guerre, les autres nations ont commencé à <strong>traiter les États-Unis avec plus de respect</strong>. Le commerce a lentement repris et le pays a commencé à construire une <strong>marine plus forte</strong> pour protéger ses navires. La <strong>paix sur les Grands Lacs</strong> a rendu la frontière nord plus calme، مما ساعد الطرفين على تجنب النزاعات المستقبلية.</p>
+                <p>Comprendre la guerre de 1812 est important car cela montre comment les États-Unis ont appris à <strong>défendre leurs droits</strong> tout en choisissant la paix lorsque cela était possible. Tout comme les gens élaborent des plans intelligents pour rester en sécurité, une nation a besoin d'objectifs clairs pour guider ses actions avec les autres. En étudiant les causes et les effets de cette guerre، يمكننا أن نرى كيف تحركت الولايات المتحدة نحو <strong>سياسة خارجية</strong> مستقرة تحمي التجارة، تدافع عن الحدود وتحاول الابتعاد عن الحروب الأوروبية المستمرة.</p>
+                <p>Ainsi, lorsque vous pensez à la manière dont les États-Unis traitent avec le monde aujourd'hui, souvenez-vous que de nombreuses habitudes ont commencé après 1812. Le pays a appris de dures leçons, a <strong>gagné un nouveau respect</strong> et a tracé une voie qui façonnerait les choix futurs pour les années à venir.</p>
+            </main>
+            <footer class="text-right mt-auto pt-4 text-sm font-semibold">Classe de M. Wallace</footer>
+        </div>
+
+        <!-- Arabic Content -->
+        <div id="content-ar" class="language-content" style="display:none;">
+            <header class="flex justify بين items-center mb-6 pb-4 border-b-2 border-black">
+                <div class="border-2 border-black px-4 py-2">
+                    <h1 class="text-xl font-bold">حرب 1812: ماذا حدث ولماذا كانت مهمة</h1>
+                </div>
+                <div class="border-b-2 border-black flex-grow mr-8 max-w-xs text-left">
+                    <label for="name-ar" class="ml-2">الاسم</label>
+                </div>
+            </header>
+            <main class="main-content">
+                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/battle-of-new-orleans?_a=BAVAZGID0" alt="لوحة تصور معركة نيو أورلينز" class="float-left mr-6 mb-4 w-1/3 max-w-md rounded border-2 border-black" onerror="this.style.display='none'">
+                <p>هل تساءلت يومًا كيف تتعلم أمة شابة التعامل مع الدول الأخرى؟ بالنسبة للولايات المتحدة، جاء <strong>نقطة تحول</strong> كبيرة مع <strong>حرب 1812</strong>. هذا الصراع اختبر قوة البلاد وخياراتها. كما أنه شكّل كيفية تصرف الولايات المتحدة مع العالم في السنوات التي تلت ذلك. ولكن ما الذي سبب الحرب، وما هي آثارها، ولماذا كانت مهمة؟</p>
+                <p>في جوهرها، نشأت الحرب من <strong>مشاكل في البحر وعلى طول الحدود</strong>. كانت السفن البريطانية <strong>توقف السفن الأمريكية، وتأخذ البحارة، وتمنع التجارة</strong>. على الأرض، اشتعلت التوترات على طول <strong>الحدود الكندية</strong>. كان البريطانيون <strong>يزودون القبائل الأمريكية الأصلية بالأسلحة</strong> التي كانت تقاوم المستوطنين الأمريكيين المتجهين غربًا. هذا الدعم جعل العديد من الأمريكيين يشعرون بأن البريطانيين كانوا يتدخلون داخل أراضي الولايات المتحدة ويشجعون على الصراع. دفع القادة في الكونغرس الذين أرادوا <strong>الدفاع عن الشرف وحماية المزارعين والتجار</strong> إلى اتخاذ إجراء. تراكمت هذه الأسباب حتى تم إعلان الحرب في عام 1812.</p>
+                <p>دار القتال في الماء وعلى الأرض. تقاتلت القوات الأمريكية والبريطانية في البحيرات العظمى، وعلى طول الحدود الكندية، وفي المحيط الأطلسي. كانت هناك خسائر فادحة، مثل <strong>حرق البيت الأبيض في واشنطن</strong>، وانتصارات قوية، مثل السيطرة على بحيرة إيري و<strong>الدفاع عن بالتيمور</strong>. في <strong>نيو أورلينز</strong>، أوقفت القوات الأمريكية هجومًا كبيرًا، مما رفع الروح المعنوية في جميع أنحاء البلاد.</p>
+                <p>فعلت الحرب أكثر من مجرد حسم المعارك. لقد غيرت كيفية تعامل الولايات المتحدة مع <strong>الشؤون الخارجية</strong>. بعد الحرب، بدأت الدول الأخرى <strong>تعامل الولايات المتحدة باحترام أكبر</strong>. أعيد فتح التجارة ببطء، وبدأت البلاد في بناء <strong>بحرية أقوى</strong> لحماية سفنها. جعل <strong>السلام في البحيرات العظمى</strong> الحدود الشمالية أكثر هدوءًا، مما ساعد كلا الجانبين على تجنب المعارك المستقبلية.</p>
+                <p>إن فهم حرب 1812 مهم لأنه يوضح كيف تعلمت الولايات المتحدة <strong>الدفاع عن حقوقها</strong> مع اختيار السلام أيضًا عندما يكون ذلك ممكنًا. تمامًا كما يضع الناس خططًا ذكية للبقاء آمنين، تحتاج الأمة إلى أهداف واضحة لتوجيه أفعالها مع الآخرين. من خلال دراسة أسباب وآثار هذه الحرب، يمكننا أن نرى كيف تحركت الولايات المتحدة نحو <strong>سياسة خارجية</strong> ثابتة <strong>تحمي التجارة، وتدافع عن الحدود، وتحاول الابتعاد عن حروب أوروبا المستمرة</strong>.</p>
+                <p>لذا، عندما تفكر في كيفية تعامل الولايات المتحدة مع العالم اليوم، تذكر أن العديد من العادات بدأت بعد عام 1812. تعلمت البلاد دروسًا قاسية، و<strong>اكتسبت احترامًا جديدًا</strong>، ورسمت مسارًا من شأنه أن يشكل الخيارات المستقبلية لسنوات قادمة.</p>
+            </main>
+            <footer class="text-left mt-auto pt-4 text-sm font-semibold">فصل الأستاذ والاس</footer>
+        </div>
+
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all language content
+            const allContent = document.querySelectorAll('.language-content');
+            allContent.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show the selected language content
+            const selectedContent = document.getElementById('content-' + lang);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+
+            // Update button styles
+            const allButtons = document.querySelectorAll('.lang-button');
+            allButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            const selectedButton = document.getElementById('btn-' + lang);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
+            
+            // Adjust text direction for Arabic
+            const container = document.getElementById('worksheet-container');
+            if (lang == 'ar') {
+                container.dir = 'rtl';
+            } else {
+                container.dir = 'ltr';
+            }
+        }
+    </script>
+</body>
+</html>
