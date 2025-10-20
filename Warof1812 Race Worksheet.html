@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" id="html-doc">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual R.A.C.E. Worksheet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .worksheet-container {
+            width: 95vw;
+            height: 95vh;
+            max-width: 1000px;
+            background-color: white;
+            border: 2px solid black;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .zigzag-top, .zigzag-bottom {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background:
+                linear-gradient(135deg, black 10px, transparent 0) 0 10px,
+                linear-gradient(-135deg, black 10px, transparent 0) 0 10px;
+            background-size: 20px 20px;
+        }
+        
+        .zigzag-top { right: 2.5rem; top: 1rem; }
+        .zigzag-bottom { left: 1rem; bottom: 1rem; }
+        
+        html[dir="rtl"] .zigzag-top { left: 2.5rem; right: auto; }
+        html[dir="rtl"] .zigzag-bottom { right: 1rem; left: auto; }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            outline: none;
+            background-color: transparent;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        ::placeholder {
+          color: #9ca3af; /* gray-400 */
+          opacity: 1; 
+          font-style: italic;
+        }
+
+        .lang-button {
+            padding: 0.25rem 0.75rem;
+            border: 1px solid #4b5563;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .lang-button.active {
+            background-color: #1f2937;
+            color: white;
+        }
+
+        /* RTL Specific Styles */
+        html[dir="rtl"] body {
+             font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        html[dir="rtl"] header .flex-grow {
+            margin-left: 0;
+            margin-right: 2rem; /* was ml-8 */
+        }
+         html[dir="rtl"] main {
+            grid-template-columns: 1fr auto;
+         }
+         html[dir="rtl"] .race-column > div {
+            border-right: 0;
+            border-left: 2px solid black;
+         }
+        html[dir="rtl"] .race-column > div:first-child {
+             border-left: 2px solid black;
+        }
+        html[dir="rtl"] footer {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="worksheet-container">
+        
+        <div class="zigzag-top"></div>
+        <div class="zigzag-bottom"></div>
+
+        <!-- Header Section -->
+        <header class="flex justify-between items-center mb-4">
+            <div class="flex items-center gap-4">
+                 <div class="border-2 border-black px-4 py-2">
+                    <h1 class="text-xl font-bold" data-translate="worksheetTitle">R.A.C.E. U.S. History</h1>
+                </div>
+                <div class="flex space-x-2 border border-gray-600 rounded-md p-1">
+                    <button class="lang-button active" onclick="translatePage('en')">EN</button>
+                    <button class="lang-button" onclick="translatePage('es')">ES</button>
+                    <button class="lang-button" onclick="translatePage('fr')">FR</button>
+                    <button class="lang-button" onclick="translatePage('ar')">AR</button>
+                </div>
+            </div>
+            <div class="border-b-2 border-black flex-grow ml-8">
+                <label for="name" class="mr-2" data-translate="nameLabel">Name</label>
+                <input type="text" id="name" class="outline-none w-3/4 bg-transparent">
+            </div>
+        </header>
+
+        <!-- Question Box -->
+        <section class="border-2 border-black p-4 mb-4">
+            <p class="text-lg font-semibold" data-translate="question">How was the War of 1812 a turning point for U.S. foreign policy and Americans’ sense of nationalism?</p>
+        </section>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="flex-grow grid grid-cols-[auto,1fr] border-2 border-black">
+            <!-- Left Column: R.A.C.E. -->
+            <div class="grid grid-rows-4 race-column">
+                <div class="flex items-center justify-center border-r-2 border-black px-6">
+                    <span class="text-8xl font-black" style="font-family: 'Krona One', sans-serif;">R</span>
+                </div>
+                <div class="flex items-center justify-center border-t-2 border-r-2 border-black px-6">
+                    <span class="text-8xl font-black" style="font-family: 'Krona One', sans-serif;">A</span>
+                </div>
+                <div class="flex items-center justify-center border-t-2 border-r-2 border-black px-6">
+                    <span class="text-8xl font-black" style="font-family: 'Krona One', sans-serif;">C</span>
+                </div>
+                <div class="flex items-center justify-center border-t-2 border-r-2 border-black px-6">
+                    <span class="text-8xl font-black" style="font-family: 'Krona One', sans-serif;">E</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Textareas -->
+            <div class="grid grid-rows-4">
+                <div class="border-b-2 border-black p-2">
+                    <span class="font-bold" data-translate="restate">Restate:</span>
+                    <textarea data-translate-placeholder="restatePlaceholder"></textarea>
+                </div>
+                <div class="border-b-2 border-black p-2">
+                    <span class="font-bold" data-translate="answer">Answer:</span>
+                    <textarea data-translate-placeholder="answerPlaceholder"></textarea>
+                </div>
+                <div class="border-b-2 border-black p-2 relative">
+                    <span class="font-bold" data-translate="cite">Cite Evidence:</span>
+                    <textarea data-translate-placeholder="citePlaceholder"></textarea>
+                </div>
+                <div class="p-2">
+                    <span class="font-bold" data-translate="explain">Explain:</span>
+                     <textarea data-translate-placeholder="explainPlaceholder" class="text-sm"></textarea>
+                </div>
+            </div>
+        </main>
+         <!-- Footer -->
+        <footer class="text-right mt-2 text-sm font-semibold">
+            <span data-translate="footer">Mr Wallace's Class</span>
+        </footer>
+    </div>
+
+<script>
+    const translations = {
+        en: {
+            worksheetTitle: "R.A.C.E. U.S. History",
+            nameLabel: "Name",
+            question: "How was the War of 1812 a turning point for U.S. foreign policy and Americans’ sense of nationalism?",
+            restate: "Restate:",
+            restatePlaceholder: "The War of 1812 was a turning point for U.S. foreign policy and Americans’ sense of nationalism because...",
+            answer: "Answer:",
+            answerPlaceholder: "Directly answer the question by stating how foreign policy changed and how the sense of nationalism grew.",
+            cite: "Cite Evidence:",
+            citePlaceholder: "Evidence for foreign policy change: “______________________________.”\nEvidence for nationalism change: “______________________________.”",
+            explain: "Explain:",
+            explainPlaceholder: "This shows foreign policy changed because…\n\nThis shows nationalism grew because…",
+            footer: "Mr Wallace's Class"
+        },
+        es: {
+            worksheetTitle: "R.A.C.E. Historia de EE.UU.",
+            nameLabel: "Nombre",
+            question: "¿De qué manera la Guerra de 1812 fue un punto de inflexión para la política exterior de EE.UU. y el sentido de nacionalismo de los estadounidenses?",
+            restate: "Replantear:",
+            restatePlaceholder: "La Guerra de 1812 fue un punto de inflexión para la política exterior de EE.UU. y el sentido de nacionalismo de los estadounidenses porque...",
+            answer: "Responder:",
+            answerPlaceholder: "Responde directamente a la pregunta indicando cómo cambió la política exterior y cómo creció el sentido de nacionalismo.",
+            cite: "Citar Evidencia:",
+            citePlaceholder: "Evidencia del cambio en la política exterior: “______________________________.”\nEvidencia del cambio en el nacionalismo: “______________________________.”",
+            explain: "Explicar:",
+            explainPlaceholder: "Esto muestra que la política exterior cambió porque…\n\nEsto muestra que el nacionalismo creció porque…",
+            footer: "Clase del Sr. Wallace"
+        },
+        fr: {
+            worksheetTitle: "R.A.C.E. Histoire des États-Unis",
+            nameLabel: "Nom",
+            question: "En quoi la guerre de 1812 a-t-elle été un tournant pour la politique étrangère des États-Unis et le sentiment de nationalisme des Américains ?",
+            restate: "Reformuler:",
+            restatePlaceholder: "La guerre de 1812 a été un tournant pour la politique étrangère des États-Unis et le sentiment de nationalisme des Américains parce que...",
+            answer: "Répondre:",
+            answerPlaceholder: "Répondez directement à la question en indiquant comment la politique étrangère a changé et comment le sentiment de nationalisme s'est développé.",
+            cite: "Citer des Preuves:",
+            citePlaceholder: "Preuve du changement de politique étrangère : « ______________________________.”\nPreuve du changement de nationalisme : « ______________________________.”",
+            explain: "Expliquer:",
+            explainPlaceholder: "Cela montre que la politique étrangère a changé parce que…\n\nCela montre que le nationalisme s'est développé parce que…",
+            footer: "Cours de M. Wallace"
+        },
+        ar: {
+            worksheetTitle: "R.A.C.E. تاريخ الولايات المتحدة",
+            nameLabel: "الاسم",
+            question: "كيف كانت حرب 1812 نقطة تحول في السياسة الخارجية للولايات المتحدة وشعور الأمريكيين بالقومية؟",
+            restate: "أعد الصياغة:",
+            restatePlaceholder: "كانت حرب 1812 نقطة تحول في السياسة الخارجية للولايات المتحدة وشعور الأمريكيين بالقومية لأن...",
+            answer: "أجب:",
+            answerPlaceholder: "أجب مباشرة على السؤال بذكر كيف تغيرت السياسة الخارجية وكيف نما الشعور بالقومية.",
+            cite: "استشهد بالأدلة:",
+            citePlaceholder: "دليل على تغير السياسة الخارجية: “______________________________.”\nدليل على تغير الشعور بالقومية: “______________________________.”",
+            explain: "اشرح:",
+            explainPlaceholder: "هذا يوضح أن السياسة الخارجية تغيرت لأن…\n\nهذا يوضح أن الشعور بالقومية نما لأن…",
+            footer: "صف السيد والاس"
+        }
+    };
+
+    function translatePage(lang) {
+        const langData = translations[lang];
+        const htmlDoc = document.getElementById('html-doc');
+        
+        // Set document language and direction
+        htmlDoc.lang = lang;
+        htmlDoc.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        // Translate text content
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (langData[key]) {
+                el.textContent = langData[key];
+            }
+        });
+
+        // Translate placeholders
+        document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-translate-placeholder');
+            if (langData[key]) {
+                el.placeholder = langData[key];
+            }
+        });
+        
+        // Update active button
+        document.querySelectorAll('.lang-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector(`.lang-button:nth-child(${['en', 'es', 'fr', 'ar'].indexOf(lang) + 1})`).classList.add('active');
+    }
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', () => {
+        translatePage('en');
+    });
+
+</script>
+</body>
+</html>
